@@ -49,7 +49,7 @@ def main():
     #season for festival
     print("What season would you like to attend?")
     print("1) Summer\n"+"2) Winter\n"+"3) Fall\n" +"4) Spring")
-    input("Enter your season choice: ")
+    fest_season = input("Enter your season choice: ")
     #space
     print()
 
@@ -57,20 +57,20 @@ def main():
     print("Where would you like to have your festival?")
     print("1) Major City\n"+"2) Isolated Farmland\n"+"3) Popular Beach Destination\n"
           +"4) Stadium Atomsphere")
-    input("Enter your desired festival location: ")
+    fest_location = input("Enter your desired festival location: ")
     #space
     print()
     
     #type of Music
     print("What genre of music will be featured?")
     print("1) Rock\n"+"2) Pop\n"+"3) EDM\n" +"4) Funk\n" +"5) I WANT IT ALL")
-    input("Enter the type of music you want to listen to: ")
+    fest_genre = input("Enter the type of music you want to listen to: ")
     #space
     print()
     
     #Enter Headliner name
     print("Who will be the headliner?")
-    input("Enter your choice: ")
+    fest_headliner = input("Enter your choice: ")
 
     #space
     print()
