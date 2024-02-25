@@ -9,6 +9,7 @@
 ##promt user to input cost of the food and drinks
 ##display restaurant bill and enter a line under 
 ##declare float variables for calculation tax 7.5 tip 18%
+##TAX_PERCENT = 0.075 TIP_PERCENT = 0.18
 ##Create Restaurant print using variables to two decimals
 ##line above total
 ##display total for restaurant bill to two decimals
