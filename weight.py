@@ -31,7 +31,7 @@ def main():
     choice = int(input('Option: '))
 
     #Validation Loop, user must pick from menu choices
-    while choice > 3 or choice < 1:
+    while choice != 3:
         print("Error... Invalid option. Try Again.")
         print()
         print("Choose one of the following options:")
@@ -41,77 +41,57 @@ def main():
         choice = int(input("Option: "))
         
     #if validation is true, continue with menu
-    else: 
-        while choice == 1 or choice == 2:
-            #if option 1 is selected; display tips
-            while choice == 1: 
-                print('\nTry these 10 ways to cut 500 calories every day.')
-                print('\t* Swap your snack.')
-                print('\t* Cut one high-calorie treat.')
-                print('\t* DO NOT drink your calories.')
-                print('\t* Skip seconds.')
-                print('\t* Make low calorie substitutions.')
-                print('\t* Ask for a doggie bag.')
-                print('\t* Just say “no” to fried food.')
-                print('\t* Build a thinner pizza.')
-                print('\t* Use a smaller plate.')
-                print('\t* Avoid alcohol.')
-                print('Source: US National Library of Medicine\n')
 
-                print("Choose one of the following options:")
-                print("\t1. Display “10 ways to cut 500 calories” guideline.")
-                print("\t2. Generate next semester expected weight table.")
-                print("\t3. Quit")
-                choice = int(input("Option: "))
-                        
-                #Input Validation Loop
-                while choice > 3 or choice < 1:
-                    print('Error... Invalid option. Try Again.')
-                    print()
-                    print("Choose one of the following options:")
-                    print("\t1. Display “10 ways to cut 500 calories” guideline.")
-                    print("\t2. Generate next semester expected weight table.")
-                    print("\t3. Quit")
-                    choice = int(input("Option: "))
+    
+        #if option 1 is selected; display tips
+        if choice == 1: 
+            print('\nTry these 10 ways to cut 500 calories every day.')
+            print('\t* Swap your snack.')
+            print('\t* Cut one high-calorie treat.')
+            print('\t* DO NOT drink your calories.')
+            print('\t* Skip seconds.')
+            print('\t* Make low calorie substitutions.')
+            print('\t* Ask for a doggie bag.')
+            print('\t* Just say “no” to fried food.')
+            print('\t* Build a thinner pizza.')
+            print('\t* Use a smaller plate.')
+            print('\t* Avoid alcohol.')
+            print('Source: US National Library of Medicine\n')
 
-            #if user chooses 2
-            while choice == 2:
-                #user input priming read
-                weight = int(input("\nEnter starting weight in pounds (>=100):  "))
-
-                #validation, User must input weight value >= 100
-                while weight < 100: 
-                    print('\tError... Invalid weight. Try Again.')
-                    weight = int(input("\nEnter starting weight in pounds (>=100):  "))
+            print("Choose one of the following options:")
+            print("\t1. Display “10 ways to cut 500 calories” guideline.")
+            print("\t2. Generate next semester expected weight table.")
+            print("\t3. Quit")
+            choice = int(input("Option: "))
                     
-                #Print weight table, 4lbs subtracted from weight each month
-                else: 
-                    print('----------------')
-                    print('Month    Weight')
-                    print('----------------')
+         
 
-                    #display weight table for 6 months -4 pounds each month; user controlled loop
-                    for month in range(1,7):
-                        print(f'  {month}      {weight - 4} lbs')
-                        weight -=4
-                    else:
-                        print("\nChoose one of the following options: ")
-                        print("\t1. Display “10 ways to cut 500 calories” guideline.")
-                        print("\t2. Generate next semester expected weight table.")
-                        print("\t3. Quit")
-                        choice = int(input("Option: "))    
-                        
-                    #if choice is not 1 through 3
-                    while choice > 3 or choice < 1:
-                        print("\tError... Invalid option. Try Again")
-                        print()
-                        print("Choose one of the following options:")
-                        print("\t1. Display “10 ways to cut 500 calories” guideline.")
-                        print("\t2. Generate next semester expected weight table.")
-                        print("\t3. Quit")
-                        choice = int(input("Option: "))
-                        
+        #if user chooses 2
+        elif choice == 2:
+            #user input priming read
+            weight = int(input("\nEnter starting weight in pounds (>=100):  "))
+
+            #validation, User must input weight value >= 100
+            while weight < 100: 
+                print('\tError... Invalid weight. Try Again.')
+                weight = int(input("\nEnter starting weight in pounds (>=100):  "))
+                
+            #Print weight table, 4lbs subtracted from weight each month
+             
+            print('----------------')
+            print('Month    Weight')
+            print('----------------')
+
+            #display weight table for 6 months -4 pounds each month; user controlled loop
+            for month in range(1,7):
+                print(f'  {month}      {weight - 4} lbs')
+                weight -=4
+                            
+                    
         #If user selects 3, exits program
+        elif chopice == 3:
+            print("\nGood Bye...")
         else:
-            print("\nGood Bye...")       
+            print("Invalid.")
 main()
+
